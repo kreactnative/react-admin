@@ -1,0 +1,24 @@
+{
+  "name": "react-admin",
+  "version": "0.1.0",
+  "description": "react-admin is admin panel front-end made with react and material-ui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noosxe/react-admin.git"
+  },
+  "keywords": [
+    "admin",
+    "react",
+    "material"
+  ],
+  "author": "noosxe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noosxe/react-admin/issues"
+  },
+  "homepage": "https://github.com/noosxe/react-admin#readme"
+}
