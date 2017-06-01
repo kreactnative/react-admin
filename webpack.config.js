@@ -15,8 +15,8 @@ module.exports = {
         options: {
           presets: ['es2015', 'es2016', 'stage-0', 'stage-1', 'react'],
         },
-      }
-    ]
+      },
+    ],
   },
   resolve: {
     modules: [
@@ -29,5 +29,6 @@ module.exports = {
   devServer: {
     contentBase: __dirname,
     historyApiFallback: true,
-  }
-}
+    publicPath: '/assets/',
+  },
+};
