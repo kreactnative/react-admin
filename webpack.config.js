@@ -29,9 +29,7 @@ module.exports = {
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      minChunks: (module) => {
-        return module.context && module.context.indexOf('node_modules') !== -1;
-      },
+      minChunks: module => module.context && module.context.indexOf('node_modules') !== -1,
     }),
   ],
   devtool: 'source-map',
