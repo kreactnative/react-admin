@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router';
+import { Route, Redirect, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'react-router-redux';
 
 import { history } from 'store';
@@ -61,8 +61,20 @@ const Router = () => (
     <div>
       <PrivateRoute path={routePath('/')} component={Header} />
       <PrivateRoute path={routePath('/')} component={LeftNav} />
-      <PrivateRoute exact path={routePath('/')} component={Home} />
-      <PublicOnlyRoute exact path={routePath('/user/auth')} component={SignIn} />
+      <Switch>
+        <PrivateRoute exact path={routePath('/')} component={Home} />
+        <PublicOnlyRoute exact path={routePath('/user/auth')} component={SignIn} />
+        <Route
+          render={props => (
+            <Redirect
+              to={{
+                pathname: routePath('/'),
+                state: { from: props.location },
+              }}
+            />
+          )}
+        />
+      </Switch>
     </div>
   </ConnectedRouter>
 );
