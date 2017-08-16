@@ -6,6 +6,7 @@ import { history } from 'store';
 import config from 'config';
 
 import Home from 'pages/home/Home';
+import Section from 'pages/section/Section';
 import SignIn from 'pages/signin/SignIn';
 
 import Header from 'components/header/Header';
@@ -62,7 +63,14 @@ const Router = () => (
       <PrivateRoute path={routePath('/')} component={Header} />
       <PrivateRoute path={routePath('/')} component={LeftNav} />
       <Switch>
+        {/* Home page route */}
         <PrivateRoute exact path={routePath('/')} component={Home} />
+
+        {config.sections.map(section => (
+          <PrivateRoute exact path={routePath(`/section/${section.id}`)} component={Section} />
+        ))}
+
+        {/* User signin page route */}
         <PublicOnlyRoute exact path={routePath('/user/auth')} component={SignIn} />
         <Route
           render={props => (
