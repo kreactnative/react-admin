@@ -50,7 +50,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <AppBar position="fixed" style={{ width: 'calc(100% - 250px)' }}>
+      <AppBar position="fixed" style={{ zIndex: '1400' }}>
         <Toolbar >
           {/* <IconButton color="contrast" aria-label="Menu">
             <MenuIcon />

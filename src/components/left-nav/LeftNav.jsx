@@ -12,7 +12,7 @@ const LeftNav = () => (
   >
     <div>
       <List style={{ width: '250px' }}>
-        <ListSubheader>logo</ListSubheader>
+        <ListSubheader style={{ height: '65px' }}>logo</ListSubheader>
         <ListItem button>
           <ListItemIcon>
             <DashboardIcon />
